@@ -15,9 +15,23 @@ function MockupMovil() {
         <BordeScreen>
           <Screen>
             <ContaineImgs>
-              <img style={{ width: '100%' }} src={FoodImg} alt="FoodImg" />
               <img
-                style={{ width: '100%', height: '100%' }}
+                style={{
+                  width: '100%',
+                  flex: '0 0 100%',
+                  scrollSnapAlign: 'center',
+                }}
+                src={FoodImg}
+                alt="FoodImg"
+              />
+
+              <img
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  flex: '0 0 100%',
+                  scrollSnapAlign: 'center',
+                }}
                 src={Food2Img}
                 alt="FoodImg"
               />
@@ -89,6 +103,7 @@ const Case = styled.div`
 
 const BordeScreen = styled.div`
   position: absolute;
+
   top: 0;
   bottom: 0;
   width: 95%;
@@ -97,6 +112,7 @@ const BordeScreen = styled.div`
   border-radius: 15px;
   background-color: #000;
   overflow-y: auto;
+  scroll-snap-type: x mandatory;
 
   ::-webkit-scrollbar {
     width: 10px;
@@ -111,15 +127,14 @@ const Screen = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin: 10px 0;
   width: 100%;
 `;
 
 const ContaineImgs = styled.div`
-  padding: 0 10px;
   width: 100%;
   display: flex;
-  gap: 30px;
+  gap: 50px;
 `;
 
 const Camera = styled.div`
