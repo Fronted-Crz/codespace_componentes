@@ -1,11 +1,9 @@
-import MockupMovil from './components/MockupMovil';
-import MockupPc from './components/MockupPc';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
   return (
     <>
-      <MockupPc />
-      <MockupMovil />
+      <Navbar />
     </>
   );
 }

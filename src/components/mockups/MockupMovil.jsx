@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import FoodImg from '../../public/imgs/fastFood.png';
-import Food2Img from '../../public/imgs/food-2.png';
+import FoodImg from './../../public/imgs/fastFood.png';
+import Food2Img from '../../../public/imgs/food-2.png';
 
 function MockupMovil() {
   return (

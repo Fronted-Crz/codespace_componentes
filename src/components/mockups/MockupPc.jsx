@@ -1,5 +1,5 @@
-import prototipoimg from '../../public/imgs/medicina.png';
-import log from '../../public/logo.png';
+import prototipoimg from '../../../public/imgs/medicina.png';
+import log from '../../../public/logo.png';
 
 import styled from 'styled-components';
 
