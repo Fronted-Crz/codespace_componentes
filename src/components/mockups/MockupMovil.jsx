@@ -40,7 +40,7 @@ function MockupMovil() {
           <BarraAccessibility>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
+              classNameName="h-5 w-5"
               viewBox="0 0 20 20"
               fill="#e9e9e9"
             >
@@ -51,7 +51,7 @@ function MockupMovil() {
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                classNameName="h-5 w-5"
                 viewBox="0 0 20 20"
                 fill="#e9e9e9"
               >
@@ -61,7 +61,7 @@ function MockupMovil() {
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                classNameName="h-5 w-5"
                 viewBox="0 0 20 20"
                 fill="#e9e9e9"
               >

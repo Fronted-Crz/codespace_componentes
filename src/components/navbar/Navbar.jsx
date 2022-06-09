@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 import HamburgerMenu from './HamburgerMenu';
 
 function Navbar() {
+  const [active, setActive] = useState(false);
+
+  const handleClick = () => {
+    setActive(!active);
+  };
   return (
     <Nav>
       <Nav_Logo>
@@ -17,7 +23,7 @@ function Navbar() {
         <h1>DevCruz</h1>
       </Nav_Logo>
       <Nav_Center>
-        <ul>
+        <ul className={`${active && 'active'}`}>
           <li>
             <a data-title="Inicio" href="#">
               Inicio{' '}
@@ -58,7 +64,7 @@ function Navbar() {
           </svg>
         </div>
         <div className="nav_menu">
-          <HamburgerMenu />
+          <HamburgerMenu active={active} handleClick={handleClick} />
         </div>
       </Nav_Right>
     </Nav>
@@ -102,15 +108,22 @@ const Nav_Center = styled.div`
 
     @media screen and (max-width: 768px) {
       flex-direction: column;
-      background-color: #42aefc;
+      position: fixed;
       top: 0;
       left: 0;
-      position: absolute;
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+      background-color: #42aefc;
+      clip-path: circle(0% at 96% 5%);
+      transition: all 0.8s ease-in-out;
       z-index: -1;
+
+      &.active {
+        clip-path: circle(100% at 96% 50%);
+      }
     }
+
     li > a {
       font-size: 1rem;
       color: #fff;
@@ -126,7 +139,7 @@ const Nav_Center = styled.div`
         ::after {
           content: attr(data-title);
           position: absolute;
-          color: #000;
+          color: #fff;
           font-size: 4rem;
           font-weight: 700;
           top: 50%;
@@ -159,6 +172,8 @@ const Nav_Right = styled.div`
   }
   .nav_shop > svg {
     fill: #fff;
+    width: 25px;
+    height: 25px;
   }
   .nav_menu {
     display: none;

@@ -1,20 +1,14 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
-function HamburgerMenu() {
-  const [active, setActive] = useState(false);
-
-  const handleClick = () => {
-    setActive(!active);
-  };
+function HamburgerMenu({ active, handleClick }) {
   return (
     <Hamburger onClick={handleClick}>
       <button
-        class={`hamburger hamburger--spring ${active && 'is-active'}`}
+        className={`hamburger hamburger--spring ${active && 'is-active'}`}
         type="button"
       >
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
         </span>
       </button>
     </Hamburger>
