@@ -5,6 +5,7 @@ export const themeLight = {
   lightColor: '#42aefc',
   titleColor: '#fbfbfe',
   textColor: '#697477',
+  sectionBg: '#fff',
 };
 
 export const themeDark = {
@@ -12,6 +13,7 @@ export const themeDark = {
   lightColor: '#333',
   titleColor: '#fbfbfe',
   textColor: '#697477',
+  sectionBg: '#333',
 };
 
 const ThemeContext = createContext();

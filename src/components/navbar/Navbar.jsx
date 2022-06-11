@@ -86,6 +86,8 @@ const Nav = styled.nav`
   height: 50px;
   background-color: ${({ menuBackground }) => menuBackground};
   /* background-image: linear-gradient(144deg, #1363df, #47b5ff 50%, #91e0ff); */
+
+  position: relative;
   overflow: hidden;
 `;
 
@@ -95,6 +97,7 @@ const Nav_Logo = styled.div`
   justify-content: center;
   gap: 5px;
   margin-left: 10px;
+
   h1 {
     font-size: 1.5rem;
     color: ${({ titleColor }) => titleColor};
@@ -125,10 +128,9 @@ const Nav_Center = styled.div`
       background-color: ${({ lightColor }) => lightColor};
       clip-path: circle(0% at 96% 5%);
       transition: all 0.8s ease-in-out;
-      z-index: -1;
 
       &.active {
-        clip-path: circle(100% at 96% 50%);
+        clip-path: circle(100% at 86% 50%);
       }
     }
 
