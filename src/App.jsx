@@ -1,14 +1,7 @@
-import Home from './components/home/Home';
-import Navbar from './components/navbar/Navbar';
-import { ThemeProvider } from './context/ThemeProvider';
+import Slider from './components/sliders/Slider';
 
 function App() {
-  return (
-    <ThemeProvider>
-      <Navbar />
-      <Home />
-    </ThemeProvider>
-  );
+  return <Slider />;
 }
 
 export default App;
